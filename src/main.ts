@@ -47,10 +47,10 @@ export class App implements OnInit {
   }
 
   public resetarCampo() {
-    this.formulario.get('selecionador')?.valueChanges.subscribe(v => {
+    this.formulario.get('selecionador')?.valueChanges.subscribe((v) => {
       this.formulario.patchValue({
-        texto: ''
-      })
+        texto: '',
+      });
     });
 
     this.formulario.get('texto')?.updateValueAndValidity();
