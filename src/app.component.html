@@ -1,0 +1,14 @@
+<div>
+  <form [formGroup]="formulario">
+    <select formControlName="selecionador">
+      <option  value="CNH" id="">CNH</option>
+      <option  value="RG" id="">RG</option>
+      <option value="CI">CI</option>
+      <option value="RNE">RN</option>
+      <option value="RE">RE</option>
+    </select>
+
+    Texto: <input type="text" formControlName="texto" 
+    [textMask]="{mask: tipoDeMascara(), guide: false}">
+  </form>
+</div>
