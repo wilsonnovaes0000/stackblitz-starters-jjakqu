@@ -14,6 +14,7 @@ import { mascaras } from './utils/mascaras';
 })
 export class App implements OnInit {
   public formulario!: FormGroup;
+  public mascaras = mascaras;
 
   public mascara = {
     guide: false,
@@ -39,8 +40,8 @@ export class App implements OnInit {
   public tipoDeMascara(): (string | RegExp)[] | false {
     const tipoDocumento = this.formulario.get('selecionador')?.value;
 
-    if (tipoDocumento in mascaras) {
-      return mascaras[tipoDocumento];
+    if (tipoDocumento in this.mascaras) {
+      this.mascaras[tipoDocumento].mask;
     }
 
     return false;
